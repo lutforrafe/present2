@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "696088007214",
+    "firebase_url": "https://present-96cf5.firebaseio.com",
+    "project_id": "present-96cf5",
+    "storage_bucket": "present-96cf5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696088007214:android:16851cab825bed80",
+        "android_client_info": {
+          "package_name": "com.example.android.present"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696088007214-2jjgild9omd0lq2fbrr5d251tfkslspc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGJj7AI-0zAndrljCkmq6vmDZeeGR7FXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696088007214-2jjgild9omd0lq2fbrr5d251tfkslspc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
