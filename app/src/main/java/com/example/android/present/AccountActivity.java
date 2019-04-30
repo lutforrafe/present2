@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class AccountActivity extends AppCompatActivity {
 
     private Button mlogout;
-
+    private Button Scan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         mlogout=findViewById(R.id.logout);
-
+        Scan = findViewById(R.id.scan);
 
         mlogout.setOnClickListener(new View.OnClickListener( ) {
             @Override
@@ -29,6 +29,12 @@ public class AccountActivity extends AppCompatActivity {
                 FirebaseAuth fAuth = FirebaseAuth.getInstance();
                 fAuth.signOut();
                 startActivity(new Intent(AccountActivity.this, MainActivity.class));
+            }
+        });
+        Scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AccountActivity.this, QRScan.class));
             }
         });
     }
