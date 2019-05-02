@@ -18,12 +18,57 @@ public class QRScan extends AppCompatActivity implements ZXingScannerView.Result
     @Override
     public void handleResult(Result result) {
 
-        String IPAddress=result.getText();
+        String QRVal=result.getText();
+        String IP1=null,IP2=null,IP3=null,IP4=null,Subject=null,CourseID=null;
+        int divider,code;
+        String[] arrOfStr = QRVal.split("\\.", 7);
+
+        try {
+            IP1 = arrOfStr[0];
+            IP2 = arrOfStr[1];
+            IP3 = arrOfStr[2];
+            IP4 = arrOfStr[3];
+            switch (arrOfStr[4]) {
+                case ("1"):
+                    Subject = "CSE";
+                    break;
+                case ("2"):
+                    Subject = "EEE";
+                    break;
+                case ("3"):
+                    Subject = "CEE";
+                    break;
+                case ("4"):
+                    Subject = "MCE";
+                    break;
+                case ("5"):
+                    Subject = "MAT";
+                    break;
+                case ("6"):
+                    Subject = "HUM";
+                    break;
+                case ("7"):
+                    Subject = "BTM";
+                    break;
+                case ("8"):
+                    Subject = "TVE";
+                    break;
+                default:
+                    Subject = "QQQ";
+            }
+            code = Integer.valueOf(arrOfStr[5]);
+            divider = Integer.valueOf(arrOfStr[6]);
+            CourseID = String.valueOf(code/divider);
+        }
+        catch(Exception e){
+
+        }
 
         try{
 
             Intent intent = new Intent(QRScan.this, SendData.class);
-            intent.putExtra("IPAddress",IPAddress);
+            SendData.SERVER_IP = IP1+"."+IP2+"."+IP3+"."+IP4;
+            SendData.course = Subject+" "+CourseID;
             startActivity(intent);
         }
 

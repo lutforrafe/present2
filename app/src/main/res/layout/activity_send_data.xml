@@ -22,7 +22,29 @@
             android:layout_height="wrap_content"
             android:id="@+id/send_info"
             android:text="SEND"
-            android:layout_margin="35dp"
+            android:layout_margin="15dp"
+            android:onClick="onClick"
     />
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/connect"
+            android:text="CONNECT"
+            android:layout_margin="15dp"
+            android:onClick="onClick"
+
+    />
+
+
+    <LinearLayout
+            android:id="@+id/msgList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+    />
+
+
 
 </LinearLayout>
